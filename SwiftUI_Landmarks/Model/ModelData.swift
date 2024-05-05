@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 var landmarkData: [Landmark] = load("landmarkData.json")
 
