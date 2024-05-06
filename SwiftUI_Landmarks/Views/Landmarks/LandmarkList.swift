@@ -35,6 +35,7 @@ struct LandmarkList: View {
         
         NavigationView {
             List {
+                Badge()
                 Toggle(isOn: $userData.showFavoritesOnly) {
                     Text("Favorites only")
                 }
