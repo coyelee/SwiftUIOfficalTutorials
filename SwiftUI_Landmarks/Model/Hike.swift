@@ -1,9 +1,9 @@
-//
-//  Hike.swift
-//  SwiftUI_Landmarks
-//
-//  Created by lichengwu on 2024-05-06.
-//
+/*
+See the LICENSE.txt file for this sample’s licensing information.
+
+Abstract:
+A representation of a hike.
+*/
 
 import Foundation
 
@@ -12,19 +12,18 @@ struct Hike: Codable, Hashable, Identifiable {
     var name: String
     var distance: Double
     var difficulty: Int
-    
     var observations: [Observation]
-    
+
     static var formatter = LengthFormatter()
-    
+
     var distanceText: String {
         Hike.formatter
             .string(fromValue: distance, unit: .kilometer)
     }
-    
+
     struct Observation: Codable, Hashable {
         var distanceFromStart: Double
-        
+
         var elevation: Range<Double>
         var pace: Range<Double>
         var heartRate: Range<Double>

@@ -40,6 +40,8 @@ struct HikeDetail: View {
     }
 }
 
-#Preview {
-    HikeDetail(hike: ModelData().hikes[0])
+struct HikeDetail_Previews: PreviewProvider {
+    static var previews: some View {
+        HikeDetail(hike: ModelData().hikes[0])
+    }
 }
