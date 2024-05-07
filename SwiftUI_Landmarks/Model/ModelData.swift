@@ -8,6 +8,16 @@
 import Foundation
 import Combine
 
+class ModelData: ObservableObject {
+//    var categories: [String : [Landmark]] {
+//        Dictionary(
+//            grouping: landmarkData,
+//            by: { $0.category.rawValue}
+//        )
+//    }
+}
+
+
 var landmarkData: [Landmark] = load("landmarkData.json")
 
 func load<T: Decodable>(_ filename: String) -> T {
