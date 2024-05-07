@@ -9,9 +9,6 @@ import SwiftUI
 
 @main
 struct SwiftUI_LandmarksApp: App {
-    
-    @State private var userData = UserData()
-    
     var body: some Scene {
         WindowGroup {
             ContentView()

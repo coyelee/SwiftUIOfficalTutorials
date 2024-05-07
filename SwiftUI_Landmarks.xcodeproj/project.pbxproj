@@ -120,6 +120,7 @@
 		9F7501382BE63285005BFA4E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9F6C18E12BE4FEC800DB2A44 /* ContentView.swift */,
 				9F97BA972BEA235C005E4080 /* Hikes */,
 				9FB1C3602BE90E9D00E71B3D /* Badges */,
 				9FC415AF2BE7C1BD00FD47B5 /* Helper */,
@@ -195,7 +196,6 @@
 		9FC415AF2BE7C1BD00FD47B5 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				9F6C18E12BE4FEC800DB2A44 /* ContentView.swift */,
 				9F75012E2BE620E7005BFA4E /* CircleImage.swift */,
 				9F7501302BE62266005BFA4E /* MapView.swift */,
 				9FC415AC2BE7BFBE00FD47B5 /* FavoriteButton.swift */,

@@ -10,16 +10,9 @@ import Combine
 
 final class UserData: ObservableObject {
     //
-    @Published var showFavoritesOnly = false
-    @Published var landmarks = landmarkData
+    //@Published var showFavoritesOnly = false
+    //@Published var landmarks = landmarkData
     //
-    
-    var categories: [String : [Landmark]] {
-        Dictionary(
-            grouping: landmarkData,
-            by: { $0.category.rawValue}
-        )
-    }
 }
 
 
