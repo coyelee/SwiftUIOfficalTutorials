@@ -15,8 +15,8 @@ class ModelData: ObservableObject {
 //            by: { $0.category.rawValue}
 //        )
 //    }
+    var hikes: [Hike] = load("hikeData.json")
 }
-
 
 var landmarkData: [Landmark] = load("landmarkData.json")
 
