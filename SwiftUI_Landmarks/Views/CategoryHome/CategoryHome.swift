@@ -41,10 +41,21 @@ struct CategoryHome: View {
 //                    Text("See All")
 //                }
             }
+            .listStyle(.inset)
             .navigationTitle("Featured")
-            .navigationBarItems(trailing: profileButton)
+            //.navigationBarItems(trailing: profileButton)
+            .toolbar() {
+                Button {
+                    showingProfile.toggle()
+                } label: {
+                    Label("User Profile", systemImage: "person.crop.circle")
+                }
+                Text("LI")
+            }
             .sheet(isPresented: $showingProfile) {
-                Text("User Profile")
+                //Text("User Profile")
+                ProfileHost()
+                    .environmentObject(modelData)
             }
         } detail: {
             Text("Select a Landmark")
