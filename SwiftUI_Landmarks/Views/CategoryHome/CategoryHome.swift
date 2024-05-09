@@ -25,21 +25,19 @@ struct CategoryHome: View {
     var body: some View {
         NavigationSplitView {
             List {
-                modelData.features[0].image
+                /*modelData.features[0].image
                     .resizable()
                     .scaledToFill()
                     .frame(height: 200)
                     .clipped()
-                    .listRowInsets(EdgeInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0)))
+                    .listRowInsets(EdgeInsets())*/
+                PageView(pages: modelData.features.map { FeatureCard(landmark: $0) })
+                    .listRowInsets(EdgeInsets())
                 
                 ForEach(modelData.categories.keys.sorted(), id: \.self) { key in
                     CategoryRow(categoryName: key, items: modelData.categories[key]!)
                 }
                 .listRowInsets(EdgeInsets())
-                
-//                NavigationLink(destination: LandmarkList()) {
-//                    Text("See All")
-//                }
             }
             .listStyle(.inset)
             .navigationTitle("Featured")
@@ -50,7 +48,7 @@ struct CategoryHome: View {
                 } label: {
                     Label("User Profile", systemImage: "person.crop.circle")
                 }
-                Text("LI")
+                //Text("LI")
             }
             .sheet(isPresented: $showingProfile) {
                 //Text("User Profile")
